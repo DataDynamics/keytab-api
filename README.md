@@ -9,7 +9,7 @@ https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nss
 관리자 모드로 PowerShell을 실행하고 다음의 커맨드를 실행합니다.
 
 ```
-> nssm install KeytabAPIService
+> nssm.exe install KeytabAPIService
 ```
 
 서비스 설정창이 나타나면 다음과 같이 입력합니다. 
