@@ -128,6 +128,30 @@ def create_and_upload_keytab():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+@app.route('/download/<path:file_path>', methods=['GET'])
+def download_file(file_path):
+    """
+    HDFS에서 파일을 다운로드하는 API 엔드포인트.
+    :param file_path: 다운로드할 HDFS 파일 경로
+    :return: 파일을 클라이언트로 전송
+    """
+    try:
+        # HDFS에서 파일 읽기
+        file_data = client.read(file_path)
+        
+        # 메모리에서 파일 데이터를 바이트 스트림으로 변환
+        return send_file(
+            io.BytesIO(file_data),
+            as_attachment=True,
+            download_name=os.path.basename(file_path),  # 파일 이름 지정
+            mimetype='application/octet-stream'  # MIME 타입을 일반 바이너리 파일로 설정
+        )
+    except Exception as e:
+        # 오류 처리
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == '__main__':
     app.run(
         host=app_config.get('host', '127.0.0.1'),
