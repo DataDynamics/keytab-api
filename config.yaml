@@ -1,0 +1,6 @@
+app:
+  host: "127.0.0.1"
+  port: 50001
+  debug: true
+  logfile-path: C:\apps\keytab-api\app.log
+  keytab-default-password: @123qwe
