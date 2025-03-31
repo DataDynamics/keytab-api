@@ -67,19 +67,19 @@ Cloudera Manager > HDFS > Configuration > Cluster-wide Advanced Configuration Sn
     <property>
         <name>hadoop.proxyuser.kadmin.hosts</name>
         <value>*</value>
-        <description>Allow the 'hive' user to impersonate other users from any host</description>
+        <description>Allow the 'kadmin' user to impersonate other users from any host</description>
     </property>
 
     <property>
         <name>hadoop.proxyuser.kadmin.groups</name>
         <value>*</value>
-        <description>Allow the 'hive' user to impersonate other users from any group</description>
+        <description>Allow the 'kadmin' user to impersonate other users from any group</description>
     </property>
 
     <property>
         <name>hadoop.proxyuser.kadmin.users</name>
         <value>*</value>
-        <description>Allow the 'hive' user to impersonate any other user</description>
+        <description>Allow the 'kadmin' user to impersonate any other user</description>
     </property>
 </configuration>
 ```
