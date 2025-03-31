@@ -2,6 +2,12 @@
 
 Kerberos 인증시 필요한 Keytab 파일을 생성하는 API
 
+## PyPi 패키지 설치
+
+```
+> pip3 install flask flasgger hdfs
+```
+
 ## Flask App의 윈도 서비스 등록
 
 https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nssm-2.24.zip)한 후 `C:\Windows\System32`에 복사합니다.
