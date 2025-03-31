@@ -51,3 +51,35 @@ https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nss
 
 서비스를 부팅시 자동으로 실행하도록 하려면 `service.msc`에서 "서비스 속성 > 시작 유형 > 자동" 으로 변경하거나 NSSM 실행시 "Details 탭 > Startup type > Automatic"을 설정하십시오.
 
+## HDFS를 위한 Proxy User 등록
+
+Cloudera Manager > HDFS > Configuration > Cluster-wide Advanced Configuration Snippet (Safety Valve) for core-site.xml 설정에 다음을 추가합니다.
+
+* `hadoop.proxyuser.kadmin.hosts` : `*` (모든 호스트 허용)
+* `hadoop.proxyuser.kadmin.users` : `*` (모든 사용자 허용)
+* `hadoop.proxyuser.kadmin.groups` : `*` (모든 그룹 허용)
+
+이렇게 설정하면 다음과 같이 XML로 생성합니다.
+
+```xml
+<configuration>
+    <!-- Proxy User 설정 -->
+    <property>
+        <name>hadoop.proxyuser.kadmin.hosts</name>
+        <value>*</value>
+        <description>Allow the 'hive' user to impersonate other users from any host</description>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.kadmin.groups</name>
+        <value>*</value>
+        <description>Allow the 'hive' user to impersonate other users from any group</description>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.kadmin.users</name>
+        <value>*</value>
+        <description>Allow the 'hive' user to impersonate any other user</description>
+    </property>
+</configuration>
+```
