@@ -10,7 +10,7 @@ Kerberos 인증시 필요한 Keytab 파일을 생성하는 API
 
 ## Flask App의 윈도 서비스 등록
 
-https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nssm-2.24.zip)한 후 `C:\Windows\System32`에 복사합니다.
+https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nssm-2.24.zip) 한 후 압축을 해제합니다.
 
 관리자 모드로 PowerShell을 실행하고 다음의 커맨드를 실행합니다.
 
