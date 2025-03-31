@@ -14,15 +14,15 @@ https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nss
 
 서비스 설정창이 나타나면 다음과 같이 입력합니다. 
 
-* Application : `C:\Python\python.exe`
-* Arguments : `C:\apps\keytab-api\server.py --config C:\apps\keytab-api\config.yaml`
+* Path : `C:\Python\python.exe`
 * Start directory : `C:\apps\keytab-api\`
+* Arguments : `C:\apps\keytab-api\server.py --config C:\apps\keytab-api\config.yaml`
 
 특정 사용자로 실행하려면 Log on 탭에서 다음을 입력합니다.
 
-* Log on as : `This account`
-* Account : `kdmin`
+* Log on as : `This account` 체크하고 사용자명 입력 (예; `kadmin`)
 * Password : @!23qwe
+* Confirm : @!23qwe
 
 이제 서비스를 등록하기 위해서 Install service 버튼을 클릭합니다.
 
@@ -43,5 +43,5 @@ https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nss
 > net start KeytabAPIService
 ```
 
-서비스를 부팅시 자동으로 실행하도록 하려면 `service.msc`에서 "서비스 속성 > 시작 유형 > 자동" 으로 변경합니다.
+서비스를 부팅시 자동으로 실행하도록 하려면 `service.msc`에서 "서비스 속성 > 시작 유형 > 자동" 으로 변경하거나 NSSM 실행시 "Details 탭 > Startup type > Automatic"을 설정하십시오.
 
