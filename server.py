@@ -6,7 +6,8 @@ import subprocess
 import logging
 from logging.handlers import TimedRotatingFileHandler
 import json
-
+from hdfs import InsecureClient
+import os
 
 # YAML 설정 파일 로드 함수
 def load_config(path='config.yaml'):
