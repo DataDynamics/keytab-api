@@ -53,6 +53,8 @@ https://nssm.cc 사이트에서 NSSM을 다운로드(https://nssm.cc/release/nss
 
 ## HDFS를 위한 Proxy User 등록
 
+Windows Server에서 `kadmin`으로 HDFS에 Keytab 파일을 업로드하려면 HDFS에 권한이 필요합니다. 이를 위해서 해당 계정을 proxy user 로 등록하여 super user 권한을 갖도록 설정하도록 합니다.
+
 Cloudera Manager > HDFS > Configuration > Cluster-wide Advanced Configuration Snippet (Safety Valve) for core-site.xml 설정에 다음을 추가합니다.
 
 * `hadoop.proxyuser.kadmin.hosts` : `*` (모든 호스트 허용)
