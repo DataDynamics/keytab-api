@@ -1,6 +1,10 @@
 app:
-  host: "127.0.0.1"
+  host: "0.0.0.0"
   port: 50001
   debug: true
-  logfile-path: C:\apps\keytab-api\app.log
+  logfile-path: app.log
   keytab-default-password: @123qwe
+  realm: DATALAKE
+  webhdfs-url: http://hdm1.datalake.net:14000
+  keytab-file-path: /system/keytabs
+  keytab-file-local-temp-path: tabs
