@@ -2,6 +2,11 @@
 
 Kerberos 인증시 필요한 Keytab 파일을 생성하는 API
 
+## Requirement
+
+* HttpFS가 설치되어 있어야 합니다.
+* Keytab을 생성하기 위한 사용자로 실행해야 합니다.
+
 ## PyPi 패키지 설치
 
 ```
