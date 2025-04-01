@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Author: KIM BYOUNGGON (architect@data-dynamics.io)
+Description: Active Directory 서버에서 Keytab을 생성 및 다운로드를 기능을 제공하는 API
+"""
+
 import argparse
 import io
 import logging
