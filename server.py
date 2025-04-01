@@ -64,11 +64,16 @@ swagger = Swagger(app, template={
     "info": {
         "title": "Keytab API",
         "description": "Keytab API",
-        "version": "1.0"
+        "version": "1.0.0",
+        "contact": {
+            "name": "KIM BYOUNGGON",
+            "email": "architect@data-dynamics.io",
+            "url": "https://github.com/DataDynamics"
+        }
     },
     "basePath": "/",
+    "schemes": ["http"]
 })
-
 
 def create_keytab(username, keytab_file_path):
     """
