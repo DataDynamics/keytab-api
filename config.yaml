@@ -4,7 +4,7 @@ app:
   debug: true
   logfile-path: app.log
   keytab-default-password: @123qwe
-  realm: DATALAKE
+  realm: DATALAKE.NET
   webhdfs-url: http://hdm1.datalake.net:14000
   keytab-file-path: /system/keytabs
   keytab-file-local-temp-path: tabs
