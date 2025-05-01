@@ -81,7 +81,7 @@ def create_keytab(username, keytab_file_path):
     """
 
     # Active Directory Realm
-    realm = app_config.get('realm', 'DATALAKE')
+    realm = app_config.get('realm', 'DATALAKE.NET')
     password = app_config.get('keytab-default-password', '@123qwe')
 
     # Kerberos 명령어 사용하여 Keytab 생성
@@ -96,7 +96,7 @@ def create_keytab(username, keytab_file_path):
         '-pass',
         f'{password}',
         '-ptype',
-        'KRB5_NT_PRINCIPAL',
+        'All',
         '-kvno',
         '0'
     ]
